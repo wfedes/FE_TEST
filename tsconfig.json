@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",                      // 기본 경로
+    "paths": {
+      "@components/*": ["components/*"],  // 컴포넌트
+      "@styles/*": ["styles/*"],          // 스타일
+      "@pages/*": ["pages/*"],           // 페이지
+    },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
