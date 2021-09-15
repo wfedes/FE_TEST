@@ -1,4 +1,11 @@
+// 정의한 스타일은 figma에서 확인하실 수 있습니다.
+// https://www.figma.com/file/kjQt73lTcFIVs9IgYk5UzY/Result-page?node-id=202%3A44
 
+
+// 글로벌 스타일을 root에 미리 정의
+// 컬러, 폰트사이즈, 폰트 두께
+// 브라우저 가로(여기서는 반응형이 아니므로 미디어쿼리는 생략)
+// 반응형 UI가 아닌 임시 UI 이므로 width 를 고정시켰습니다.
 :root {
   --width-layout-web: 1200px;
 
@@ -39,23 +46,19 @@
   --font-weight-bold: 700;
 }
 
-
-html,
-body {
+// reset css을 적용하여 브라우저의 기본 스타일을 초기화
+html, body {
   padding: 0; margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   scroll-behavior: smooth;
 }
-
 *::-webkit-scrollbar {height: 5px; width: 7px;}
 *::-webkit-scrollbar-track {background-color: transparent;}
 *::-webkit-scrollbar-thumb {border-radius: 3px; background-color: #000;}
 *::-webkit-scrollbar-button {width: 0; height: 0;}
-
 * {word-break: break-word;}
 *, *::after, *::before {box-sizing: border-box;}
-
 ul, li {list-style: none;}
 ul, p, h1, h2, h3, h4 {padding: 0; margin: 0;}
 a { color: inherit; text-decoration: none;}

@@ -1,20 +1,29 @@
 
+// 중복으로 사용되는 속성을 mixin 변수로 저장
 @mixin center {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
-
-@mixin screenReader {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+@mixin shadow {
+  // 쉐도우 컬러는 figma에서 opacity가 적용되어 있어서
+  // 브라우저 호환을 고려하여 16진수보다 알파가 적용된 rgba로 적용
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.10);
 }
 
+
+
+// 접근성을 위한 스크린리더
+// 이미지 대체 텍스트를 숨겨줄 스타일 적용
+
+// mixin 으로 css 코드를 변수에 저장하고
+@mixin screenReader {
+  clip: rect(0 0 0 0); clip-path: inset(50%);
+  height: 1px; overflow: hidden; position: absolute;
+  white-space: nowrap; width: 1px;
+}
+// 사용하고자하는 각 페이지와 컴포넌트에
+// .sr 클래스명을 붙여준뒤 _var.scss 를 import 해서
+// 해당 클래스 스타일에 적용시킴
 .sr {
   @include screenReader;
 }
