@@ -1,0 +1,21 @@
+@import '../../styles/var';
+
+// 이미지 대체텍스트용 스타일
+.sr {
+  @include screenReader;
+}
+
+// 헤더 컴포넌트의 스타일
+.hd {
+  // 헤더 가로와 높이 지정
+  width: 100%;
+  height: 70px;
+
+  // 로고 위치 지정
+  @include center;
+  padding: 0 40px;
+
+  // 드롭쉐도우와 백그라운드 컬러 적용
+  @include shadow;
+  background: var(--color-layout-background-1);
+}
