@@ -1,0 +1,47 @@
+@import '../../styles/var';
+
+.lnb {
+  // LNB의 스타일 적용
+  width: var(--width-layout-web);
+  height: 70px;
+  border-radius: 5px;
+  @include shadow;
+  background: var(--color-layout-background-1);
+
+  // li의 요소 위치를 지정
+  @include center;
+  padding: 0 20px;
+
+  li {
+    // 폰트 컬러와 간격 적용
+    font-weight: var(--font-weight-medium);
+    color: var(--color-font-2);
+
+    // 텍스트 옆에 세로 라인 스타일 적용
+    margin: 0 10px;
+    position: relative;
+    &::after {
+      content: ''; height: 20px; width: 1px;
+      border-right: 1px solid var(--color-font-2);
+      position: absolute; top: 0; right: -10px;
+    }
+    // 마지막 li 요소의 라인 스타일은 삭제
+    &:nth-last-of-type(1) { &::after {content: none;} }
+
+    // 텍스트를 클릭 할 수 있는 영역을 넓힘
+    a {padding: 6px 37px;}
+
+    // 마우스를 올렸을 때, css 애니메이션인 transition을 적용하여 서서히 컬러가 변경 됨
+    &:hover {
+      color: var(--color-font-5);
+      transition: .5s;
+    }
+  }
+
+  // 현재 보고있는 페이지의 lnb 메뉴를 강조
+  .active {
+    padding: 6px 37px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-font-5);
+  }
+}
