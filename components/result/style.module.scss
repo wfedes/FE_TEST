@@ -1,0 +1,102 @@
+@import '../../styles/var';
+
+.result {
+  // result 박스의 기본 스타일 적용
+  width: 874px;
+  height: 708px;
+  @include shadow;
+  border-radius: 5px;
+
+  // result 레이아웃을 감싸는 영역 지정
+  padding: 24px;
+
+  // result 영역에 타이틀과 검색박스 스타일
+  // (select 영역에 버튼과 result 영역에 인풋 같은 경우는
+  //  다른 페이지에 중복해서 사용하는 경우가 많아서 atom으로 빼는 경우가 많지만
+  //  현재는 임시 UI라서 각각 하나밖에 없기에 개별 스타일로 적용해서
+  //  result와 select의 scss에 중복되는 코드가 많습니다.)
+  .title {
+    // result 타이틀과 검색 박스 위치 지정
+    display: flex;
+    justify-content: space-between;
+
+    // 타이틀 스타일
+    .inner {
+      width: 135px;
+      height: 42px;
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      p {
+        color: var(--color-font-4);
+        font-size: var(--font-size-20);
+        font-weight: var(--font-weight-medium);
+        padding-left: 40px;
+      }
+      // 타이틀 옆에 사각형 아이콘 대신 span 으로 스타일 적용
+      span {
+        width: 10px; height: 10px; border-radius: 2px; background-color: var(--color-font-5);
+        position: absolute; left: 16px; top: 10px;
+      }
+    }
+
+    // 검색박스 스타일
+    .input {
+      // 인풋과 버튼을 감싸는 기본 스타일 적용
+      width: 402px; height: 42px; border-radius: 3px;
+      border: 1px solid var(--color-table-border-2);
+      background-color: var(--color-layout-background-1);
+      // 인풋과 버튼을 정렬시킴
+      display: flex;
+      justify-content: space-between;
+      // 검색 박스안에 인풋과 검색버튼 스타일 적용
+      input {width: 350px; padding: 10px 24px; font-size: var(--font-size-14); color: var(--color-font-2);}
+      button {padding: 10px 24px;}
+    }
+  }
+
+  // 테이블 스타일
+  .table {
+    margin-top: 40px;
+    margin-bottom: 18px;
+    // 테이블의 공통 스타일
+    ul {
+      // inline-flex로 li 요소들을 같은 라인에 배치
+      display: inline-flex;
+      li {
+        // 테이블의 텍스트와 아이콘 정렬
+        @include center;
+        justify-content: space-between;
+        // 테이블의 가로 폭
+        width: 260px;
+        &:nth-of-type(1) {width: 46px;}
+      }
+    }
+
+    // 테이블 헤더 스타일
+    .header {
+      // 테이블 헤더의 백그라운드와 폰트 컬러
+      background-color: var(--color-table-background-4);
+      color: var(--color-font-1);
+      // 테이블 헤더 모서리에 라운드값 적용
+      border-radius: 5px 5px 0px 0px;
+      box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.20);
+
+      // 테이블 헤더의 타이틀 스타일 적용
+      li {
+        p {
+          width: 220px;
+          @include center;
+          justify-content: center;
+        }
+        // 타이틀 열의 구분을 짓기위한 보더 라인 적용, 마지막 요소 boder는 삭제
+        border-right: 1px solid var(--color-table-border-2);
+        &:nth-last-child(1) {
+          border-right: none;
+        }
+      }
+    }
+    // 테이블 row 스타일
+    .data {}
+  }
+}
