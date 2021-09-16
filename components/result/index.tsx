@@ -1,6 +1,7 @@
 import style from './style.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
+import classNames from 'classnames';
 
 const Result = () => (
   <>
@@ -39,12 +40,175 @@ const Result = () => (
             </button>
           </li>
         </ul>
-        <ul className={style.data}>
-          <li></li>
-          <li>Name</li>
-          <li>- 9.08273</li>
-          <li>- 9.704</li>
-        </ul>
+        <div className={style.inner}>
+          <ul className={style.data}>
+            <li>
+              <input type="checkbox"/>
+            </li>
+            <li><p>Name</p></li>
+            <li><p>- 9.08273</p></li>
+            <li><p>- 9.704</p></li>
+          </ul>
+
+
+          <ul className={classNames({[style.data]: true, [style.dataactive]: true})}>
+            <li>
+              <input type="checkbox"/>
+            </li>
+            <li><p>Name</p></li>
+            <li><p>- 9.08273</p></li>
+            <li><p>- 9.704</p></li>
+          </ul>
+          <div className={style.subdata}>
+            <ul className={classNames({[style.subdatarow]: true, [style.subdatarowactive]: true})}>
+              <li>
+                <input type="checkbox"/>
+              </li>
+              <li><p>subName-1</p></li>
+              <li><p>- 9.08273</p></li>
+              <li><p>- 9.704</p></li>
+            </ul>
+            <ul className={style.subdatarow}>
+              <li>
+                <input type="checkbox"/>
+              </li>
+              <li><p>subName-2</p></li>
+              <li><p>- 9.08273</p></li>
+              <li><p>- 9.704</p></li>
+            </ul>
+            <ul className={classNames({[style.subdatarow]: true, [style.subdatarowactive]: true})}>
+              <li>
+                <input type="checkbox"/>
+              </li>
+              <li><p>subName-3</p></li>
+              <li><p>- 9.08273</p></li>
+              <li><p>- 9.704</p></li>
+            </ul>
+            <ul className={style.subdatarow}>
+              <li>
+                <input type="checkbox"/>
+              </li>
+              <li><p>subName-4</p></li>
+              <li><p>- 9.08273</p></li>
+              <li><p>- 9.704</p></li>
+            </ul>
+          </div>
+
+
+
+          <ul className={style.data}>
+            <li>
+              <input type="checkbox"/>
+            </li>
+            <li><p>Name</p></li>
+            <li><p>- 9.08273</p></li>
+            <li><p>- 9.704</p></li>
+          </ul>
+          <ul className={style.data}>
+            <li>
+              <input type="checkbox"/>
+            </li>
+            <li><p>Name</p></li>
+            <li><p>- 9.08273</p></li>
+            <li><p>- 9.704</p></li>
+          </ul>
+          <ul className={style.data}>
+            <li>
+              <input type="checkbox"/>
+            </li>
+            <li><p>Name</p></li>
+            <li><p>- 9.08273</p></li>
+            <li><p>- 9.704</p></li>
+          </ul>
+          <ul className={style.data}>
+            <li>
+              <input type="checkbox"/>
+            </li>
+            <li><p>Name</p></li>
+            <li><p>- 9.08273</p></li>
+            <li><p>- 9.704</p></li>
+          </ul>
+          <ul className={style.data}>
+            <li>
+              <input type="checkbox"/>
+            </li>
+            <li><p>Name</p></li>
+            <li><p>- 9.08273</p></li>
+            <li><p>- 9.704</p></li>
+          </ul>
+          <ul className={style.data}>
+            <li>
+              <input type="checkbox"/>
+            </li>
+            <li><p>Name</p></li>
+            <li><p>- 9.08273</p></li>
+            <li><p>- 9.704</p></li>
+          </ul>
+          <ul className={style.data}>
+            <li>
+              <input type="checkbox"/>
+            </li>
+            <li><p>Name</p></li>
+            <li><p>- 9.08273</p></li>
+            <li><p>- 9.704</p></li>
+          </ul>
+          <ul className={style.data}>
+            <li>
+              <input type="checkbox"/>
+            </li>
+            <li><p>Name</p></li>
+            <li><p>- 9.08273</p></li>
+            <li><p>- 9.704</p></li>
+          </ul>
+          <ul className={style.data}>
+            <li>
+              <input type="checkbox"/>
+            </li>
+            <li><p>Name</p></li>
+            <li><p>- 9.08273</p></li>
+            <li><p>- 9.704</p></li>
+          </ul>
+          <ul className={style.data}>
+            <li>
+              <input type="checkbox"/>
+            </li>
+            <li><p>Name</p></li>
+            <li><p>- 9.08273</p></li>
+            <li><p>- 9.704</p></li>
+          </ul>
+          <ul className={style.data}>
+            <li>
+              <input type="checkbox"/>
+            </li>
+            <li><p>Name</p></li>
+            <li><p>- 9.08273</p></li>
+            <li><p>- 9.704</p></li>
+          </ul>
+          <ul className={style.data}>
+            <li>
+              <input type="checkbox"/>
+            </li>
+            <li><p>Name</p></li>
+            <li><p>- 9.08273</p></li>
+            <li><p>- 9.704</p></li>
+          </ul>
+          <ul className={style.data}>
+            <li>
+              <input type="checkbox"/>
+            </li>
+            <li><p>Name</p></li>
+            <li><p>- 9.08273</p></li>
+            <li><p>- 9.704</p></li>
+          </ul>
+          <ul className={style.data}>
+            <li>
+              <input type="checkbox"/>
+            </li>
+            <li><p>Name</p></li>
+            <li><p>- 9.08273</p></li>
+            <li><p>- 9.704</p></li>
+          </ul>
+        </div>
       </div>
     </div>
   </>

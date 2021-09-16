@@ -15,13 +15,65 @@ const Select = () => (
         <ul className={style.header}>
           <li>
             <p>Select Name</p>
-            <Image src="/images/icon/icon_ascdesc.png" alt="icon" width={40} height={40} />
+            <button><Image src="/images/icon/icon_ascdesc.png" alt="icon" width={40} height={40} /></button>
           </li>
         </ul>
-        <ul className={style.selectdata}>
+        <ul className={style.data}>
           <li>
             <p>A-1</p>
-            <Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} />
+            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
+          </li>
+          <li>
+            <p>A-1</p>
+            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
+          </li>
+          <li>
+            <p>A-1</p>
+            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
+          </li>
+          <li>
+            <p>A-1</p>
+            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
+          </li>
+          <li>
+            <p>A-1</p>
+            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
+          </li>
+          <li>
+            <p>A-1</p>
+            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
+          </li>
+          <li>
+            <p>A-1</p>
+            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
+          </li>
+          <li>
+            <p>A-1</p>
+            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
+          </li>
+          <li>
+            <p>A-1</p>
+            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
+          </li>
+          <li>
+            <p>A-1</p>
+            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
+          </li>
+          <li>
+            <p>A-1</p>
+            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
+          </li>
+          <li>
+            <p>A-1</p>
+            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
+          </li>
+          <li>
+            <p>A-3</p>
+            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
+          </li>
+          <li>
+            <p>A-3</p>
+            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
           </li>
         </ul>
       </div>
