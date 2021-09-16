@@ -8,6 +8,7 @@
   // 쉐도우 컬러는 figma에서 opacity가 적용되어 있어서
   // 브라우저 호환을 고려하여 16진수보다 알파가 적용된 rgba로 적용
   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.10);
+  background: var(--color-layout-background-1);
 }
 
 

@@ -6,7 +6,7 @@
   height: 70px;
   border-radius: 5px;
   @include shadow;
-  background: var(--color-layout-background-1);
+  margin-bottom: 20px;
 
   // li의 요소 위치를 지정
   @include center;
@@ -31,7 +31,7 @@
     // 텍스트를 클릭 할 수 있는 영역을 넓힘
     a {padding: 6px 37px;}
 
-    // 마우스를 올렸을 때, css 애니메이션인 transition을 적용하여 서서히 컬러가 변경 됨
+    // 마우스를 올렸을 때, css 애니메이션인 transition을 적용하여 텍스트 컬러가 서서히 변경됨
     &:hover {
       color: var(--color-font-5);
       transition: .5s;
