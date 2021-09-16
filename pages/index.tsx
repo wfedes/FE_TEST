@@ -5,6 +5,8 @@ import styles from '@styles/index.module.scss'
 
 import Header from '@components/header/index'
 import Lnb from '@components/lnb/index'
+import Result from '@components/result/index'
+import Select from '@components/select/index'
 
 const Home: NextPage = () => {
   return (
@@ -17,9 +19,10 @@ const Home: NextPage = () => {
       <Header />
       <h1>Project Name</h1>
       <Lnb />
-      <main className={styles.main}>
-        <p>FE_TEST</p>
-      </main>
+      <section className={styles.resultarea}>
+        <Result />
+        <Select />
+      </section>
     </div>
   )
 }
