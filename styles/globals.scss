@@ -32,6 +32,7 @@
   --color-table-background-2: #FCFCFC;
   --color-table-background-3: #F1F1F1;
   --color-table-background-4: #16274D;
+  --color-table-background-5: #E6E6E6;
   
   --color-botton-1: #16274D;
 
@@ -46,6 +47,11 @@
   --font-weight-bold: 700;
 }
 
+// 브라우저 전체에 배경 컬러 적용
+body {
+  background: var(--color-layout-background-2);
+}
+
 // reset css을 적용하여 브라우저의 기본 스타일을 초기화
 html, body {
   padding: 0; margin: 0;
@@ -53,10 +59,10 @@ html, body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   scroll-behavior: smooth;
 }
-// 브라우저 스크롤에 로고 컬러 적용
+// 브라우저 스크롤 컬러 연하게 수정
 *::-webkit-scrollbar {height: 5px; width: 9px;}
 *::-webkit-scrollbar-track {background-color: transparent;}
-*::-webkit-scrollbar-thumb {border-radius: 3px; background-color: var(--color-logo-2);}
+*::-webkit-scrollbar-thumb {border-radius: 3px; background-color: var(--color-icon-1);}
 *::-webkit-scrollbar-button {width: 0; height: 0;}
 * {word-break: break-word;}
 *, *::after, *::before {box-sizing: border-box;}
