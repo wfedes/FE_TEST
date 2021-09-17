@@ -18,64 +18,15 @@ const Select = () => (
             <button><Image src="/images/icon/icon_ascdesc.png" alt="icon" width={40} height={40} /></button>
           </li>
         </ul>
+
+        {/* Result 에서 선택한 data */}
         <ul className={style.data}>
           <li>
             <p>A-1</p>
             <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
           </li>
-          <li>
-            <p>A-1</p>
-            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
-          </li>
-          <li>
-            <p>A-1</p>
-            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
-          </li>
-          <li>
-            <p>A-1</p>
-            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
-          </li>
-          <li>
-            <p>A-1</p>
-            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
-          </li>
-          <li>
-            <p>A-1</p>
-            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
-          </li>
-          <li>
-            <p>A-1</p>
-            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
-          </li>
-          <li>
-            <p>A-1</p>
-            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
-          </li>
-          <li>
-            <p>A-1</p>
-            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
-          </li>
-          <li>
-            <p>A-1</p>
-            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
-          </li>
-          <li>
-            <p>A-1</p>
-            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
-          </li>
-          <li>
-            <p>A-1</p>
-            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
-          </li>
-          <li>
-            <p>A-3</p>
-            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
-          </li>
-          <li>
-            <p>A-3</p>
-            <button><Image src="/images/icon/icon_close.png" alt="icon" width={40} height={40} /></button>
-          </li>
         </ul>
+        
       </div>
     </div>
   </>
