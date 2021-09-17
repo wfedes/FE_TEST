@@ -109,8 +109,10 @@ result와 select의 scss에 중복되는 코드가 많습니다.)
 
       // 선택한 데이터가 많아질 경우 스크롤 할 수 있는 영역 지정
       height: 450px;
-      overflow: hidden;
-      overflow-y: scroll;
+      width: 307px;
+      overflow: overlay;  // 스크롤을 셀 위로 올림
+      overflow-y: scroll; // 세로 스크롤만 보임
+      overflow-x: hidden; // 가로 스크롤은 숨김
 
       // 선택한 row 스타일 적용
       li {
