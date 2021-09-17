@@ -67,7 +67,7 @@ module.exports = ({
 ![image](https://user-images.githubusercontent.com/54713067/133748035-463b07b7-f1e0-4d61-b6ee-7cc18d5a77a9.png)
 
 - [9] 최종 브라우저 화면
-![image](https://user-images.githubusercontent.com/54713067/133747789-66beaed7-a671-4b88-9ef2-df579faf0944.png)
+![image](https://user-images.githubusercontent.com/54713067/133751566-a0617b36-a2bd-4362-931c-9386af2b135c.png)
 
 - [10] 요구사항 미완성 내역
 ```
