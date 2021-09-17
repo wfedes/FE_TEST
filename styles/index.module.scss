@@ -19,6 +19,252 @@
     width: var(--width-layout-web);
     display: flex;
     justify-content: space-between;
+
+
+
+    
+.result {
+  // result 박스의 기본 스타일 적용
+  width: 874px;
+  height: 658px;
+  @include shadow;
+  border-radius: 5px;
+
+  // result 레이아웃을 감싸는 영역 지정
+  padding: 24px;
+
+  // result 영역에 타이틀과 검색박스 스타일
+  .title {
+    // result 타이틀과 검색 박스 위치 지정
+    display: flex;
+    justify-content: space-between;
+
+    // 타이틀 스타일
+    .inner {
+      width: 135px;
+      height: 42px;
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      p {
+        color: var(--color-font-4);
+        font-size: var(--font-size-20);
+        font-weight: var(--font-weight-medium);
+        padding-left: 40px;
+      }
+      // 타이틀 옆에 사각형 아이콘 대신 span 으로 스타일 적용
+      span {
+        width: 10px; height: 10px; border-radius: 2px; background-color: var(--color-font-5);
+        position: absolute; left: 16px; top: 10px;
+      }
+    }
+
+    // 검색박스 스타일
+    .input {
+      // 인풋과 버튼을 감싸는 기본 스타일 적용
+      width: 402px; height: 42px; border-radius: 3px;
+      border: 1px solid var(--color-table-border-2);
+      background-color: var(--color-layout-background-1);
+      // 인풋과 버튼을 정렬시킴
+      display: flex;
+      justify-content: space-between;
+      // 검색 박스안에 인풋과 검색버튼 스타일 적용
+      input {width: 350px; padding: 10px 24px; font-size: var(--font-size-14); color: var(--color-font-2);}
+      button {padding: 10px 24px;}
+    }
+  }
+
+  // 테이블 스타일
+  .table {
+    margin-top: 40px;
+    margin-bottom: 18px;
+    // 테이블의 공통 스타일
+    ul {
+      // inline-flex로 li 요소들을 같은 라인에 배치
+      display: inline-flex;
+      li {
+        // 테이블의 텍스트와 아이콘 정렬
+        @include center;
+        justify-content: space-between;
+        // 테이블의 가로 폭
+        width: 260px;
+        &:nth-of-type(1) {width: 46px;}
+      }
+    }
+
+    // 테이블 헤더 스타일
+    .header {
+      // 테이블 헤더의 백그라운드와 폰트 컬러
+      background-color: var(--color-table-background-4);
+      color: var(--color-font-1);
+      // 테이블 헤더 모서리에 라운드값 적용
+      border-radius: 5px 5px 0px 0px;
+      box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.20);
+
+      // 테이블 헤더의 타이틀 스타일 적용
+      li {
+        p {
+          width: 220px;
+          @include center;
+          justify-content: center;
+        }
+        // 타이틀 열의 구분을 짓기위한 보더 라인 적용, 마지막 요소 boder는 삭제
+        border-right: 1px solid var(--color-table-border-2);
+        &:nth-last-child(1) {
+          border-right: none;
+        }
+      }
+    }
+
+    .inner {
+      // 선택한 데이터가 많아질 경우 스크롤 할 수 있는 영역 지정
+      height: 450px;
+      width: 825px;
+      overflow: overlay;  // 스크롤을 셀 위로 올림
+      overflow-y: scroll; // 세로 스크롤만 보임
+      overflow-x: hidden; // 가로 스크롤은 숨김
+      padding: 0;
+
+      // 테이블 row 스타일
+      .data {
+        // 스크롤이 생기면서 전체적으로 좌측으로 조금 밀리기에
+        // width를 고정시켜서 table header와 border 라인을 동일하게 맞춤
+        width: 824px;
+
+        // li 요소들이 추가될때마다 세로로 배치
+        display: flex;
+        align-items: flex-start;
+
+        // checkbox 스타일
+        input {
+          height: 34px;
+          width:  20px;
+        }
+
+        // 선택한 row 스타일 적용
+        li {
+          p {
+            width: 220px; height: 40px;
+            @include center;
+            justify-content: center;
+            color: var(--color-font-3);
+            font-weight: var(--font-weight-medium);
+            font-size: var(--font-size-16);
+          }
+          // 첫번째 요소인 체크박스를 감싸는 스타일
+          &:nth-of-type(1) {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          // 두번째 요소인 Name 폰트 스타일
+          &:nth-of-type(2) {
+            p {
+              color: var(--color-font-4);
+              font-weight: var(--font-weight-bold);
+            }
+          }
+          // row 라인 적용
+          border: 1px solid var(--color-table-border-1);
+          // 아래 row와 border가 겹치므로 위,오른쪽은 제외
+          border-top: 0;
+          border-right: 0;
+        }
+        
+        // row 홀수로 백그라운드 컬러 적용
+        &:nth-child(2n) {
+          background-color: var(--color-table-background-2);
+        }
+        // row에 마우스를 올렸을 때 백그라운드 컬러 변경
+        &:hover {
+          background-color: var(--color-table-background-3);
+        }
+      }
+
+      // row를 클릭시 subdata 스타일
+      .subdata {
+        display: flex;
+        flex-direction: column;
+        width: 824px;
+        // checkbox 스타일
+        input {
+          height: 34px;
+          width:  20px;
+        }
+        // 선택한 row 스타일 적용
+        li {
+          p {
+            width: 220px; height: 40px;
+            @include center;
+            justify-content: center;
+            color: var(--color-font-2);
+            font-weight: var(--font-weight-medium);
+            font-size: var(--font-size-16);
+          }
+          // 첫번째 요소인 체크박스를 감싸는 스타일
+          &:nth-of-type(1) {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          // 두번째 요소인 Name 폰트 스타일
+          &:nth-of-type(2) {
+            p {
+              color: var(--color-font-2);
+              font-weight: var(--font-weight-medium);
+            }
+          }
+          // row 라인 적용
+          border: 1px solid var(--color-table-border-1);
+          // 아래 row와 border가 겹치므로 위,오른쪽은 제외
+          border-top: 0;
+          border-right: 0;
+        }
+        
+        .subdatarow {
+          li {
+            background-color: var(--color-table-background-3);
+            border: 1px solid var(--color-table-border-2);
+            border-right: 0;
+            border-top: 0;
+          }
+        }
+        .subdatarowactive {
+          li {
+            p {
+              color: var(--color-font-5);
+              font-weight: var(--font-weight-bold);
+            }
+          }
+        }
+
+      }
+
+      // 선택된 row 스타일
+      .dataactive {
+        li {
+          background-color: var(--color-table-background-5);
+          border: 1px solid var(--color-table-border-2);
+          border-right: 0;
+
+          // 선택된 li의 폰트 스타일
+          p {
+            font-weight: var(--font-weight-bold);
+            color: var(--color-font-4);
+          }
+          // 선택된 li의 두번째 요소인 Name 폰트 스타일
+          &:nth-of-type(2) {
+            p {
+              font-weight: var(--font-weight-bold);
+            }
+          }
+        }
+      }
+    }
+  }
+}
   }
 }
 
