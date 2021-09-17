@@ -1,8 +1,9 @@
 
 ## Getting Started
 
-npm run dev  
-yarn dev
+`npm i`
+`npm run dev`
+`yarn dev`
 
 
 ## Stack
@@ -12,21 +13,28 @@ yarn dev
 
 ## Setting
 
-- ReactJS 기반 프레임워크인 NextJS TypeScript 설치  
+- [1] ReactJS 기반 프레임워크인 NextJS TypeScript 설치  
 `npx create-next-app --typescript`
 
-- 프리티어 설정 (큰따옴표/작은따옴표 구분 상관없이 저장 가능하고, 세미콜론 없이 저장가능)  
-`npm i -D prettier`
+- [2] package.json 에 기본 라이브러리 설치
+```
+npm i -D prettier                                 // 프리티어 설정
+yarn add @zeit/next-sass node-sass @zeit/next-css // sass 및 css
+yarn add classnames                               // 중복된 classnames
+yarn add axios                                    // axios
+yarn add -D cross-env                             // port 8080 으로 변경
+yarn add -D webpack@webpack-4                     // webpack 5를 4로 다운그레이드 적용
+```
+
+- [3] 프리티어, 상대경로, 웹팩 설정
+
 ```
 // package.json
   "prettier": {
     "semi": false,
     "singleQuote": true
   },
-```
 
-- 상대경로 설정
-```
 // tsconfig.json
 "compilerOptions": {
   "baseUrl": "./",                      // 기본 경로
@@ -36,19 +44,30 @@ yarn dev
     "@pages/*": ["pages/*"],            // 페이지 경로
   },
 }
-```
 
-- sass와 css를 같이 사용하기위해 Next가 기본으로 컴파일하는 webpack 5를 4로 다운그레이드 적용  
-`yarn add -D webpack@webpack-4`
-```
 // next.config.js
 module.exports = ({
   webpack5: false,
 })
 ```
 
-- sass 추가  
-`yarn add @zeit/next-sass node-sass @zeit/next-css`
+- [5] components, styles, seo, web accessibility 셋팅 및 작업  
+`작업 내역은 커밋 로그에 저장`
 
-- port 8080 으로 변경
-`yarn add -D cross-env`
+- [6] 인터랙션 스타일이 적용된 요소
+1. Download 버튼의 hover와 active
+2. Figma에서 logo를 활용한 loading 애니메이션 프로토타입 (figma에서 확인)
+
+- [7] UI / UX 개선 전/후  
+[Figma 프로토타입](https://www.figma.com/proto/kjQt73lTcFIVs9IgYk5UzY/Result-page?node-id=207%3A2179&scaling=contain&page-id=202%3A44&starting-point-node-id=207%3A2179&show-proto-sidebar=1)
+
+- [8] UI / UX 개선 전/후  
+[Figma 상세설명 및 스타일 가이드 정리 (Styles, Components)](https://www.figma.com/file/kjQt73lTcFIVs9IgYk5UzY/Result-page?node-id=202%3A44)
+
+
+- 요구사항 미완성 내역
+```
+오름차순, 내림차순 정렬
+서브데이터 api 호출
+검색 값 출력 (검색 값 계속 저장)
+```
